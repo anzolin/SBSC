@@ -1,0 +1,5 @@
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Lib\bin\Release\SBSC.Lib.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Lib\bin\Release\SBSC.Lib.pdb
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Lib\obj\Release\SBSC.Lib.csprojResolveAssemblyReference.cache
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Lib\obj\Release\SBSC.Lib.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Lib\obj\Release\SBSC.Lib.pdb

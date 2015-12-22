@@ -1,0 +1,88 @@
+﻿@model SBSC.ViewModel.Devolucoes.DevolucaoViewModel
+
+@{
+
+}
+
+<div class="page-header">
+    <h2>@ViewBag.Title <small>@ViewBag.Subtitle</small></h2>
+</div>
+
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        @*@Html.HiddenFor(model => model.PessoaId)
+        @Html.HiddenFor(model => model.Livro1Id)
+        @Html.HiddenFor(model => model.Livro2Id)
+        @Html.HiddenFor(model => model.Livro3Id)
+        @Html.HiddenFor(model => model.DtEmprestimo)
+        @Html.HiddenFor(model => model.DtPrevisaoDevolucao)*@
+        @Html.HiddenFor(model => model.StatusId)
+        @Html.HiddenFor(model => model.SituacaoId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PessoaText, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.PessoaText)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Livro1Text, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Livro1Text)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Livro2Text, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Livro2Text)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Livro3Text, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.Livro3Text)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DtEmprestimoText, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.DtEmprestimoText)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DtPrevisaoDevolucaoText, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.DtPrevisaoDevolucaoText)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DtDevolucao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DtDevolucao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DtDevolucao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Devolver" class="btn btn-success" />
+                <button type="button" class="btn btn-default" onclick="window.location = '@Url.Action("Search")';">Cancelar e voltar</button>
+            </div>
+        </div>
+    </div>
+}
+
+<br />

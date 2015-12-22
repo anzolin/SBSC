@@ -1,0 +1,78 @@
+﻿@model SBSC.ViewModel.Devolucoes.DevolucaoSearchViewModel
+@using SBSC.Model
+@{
+    Layout = "~/Views/Shared/_LayoutReport.cshtml";
+}
+
+<div class="page-header">
+    <h3>@ViewBag.Title <small>@ViewBag.Subtitle</small></h3>
+</div>
+
+@if (!Model.Objetos.Any())
+{
+    <div class="alert alert-warning" role="alert">
+        Nenhum empréstimo atrasado encontrado, talvez o empréstimo que você está procurando não exista.
+    </div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().SituacaoText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().DtEmprestimoText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().DtPrevisaoDevolucaoText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().LivrosText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().PessoaText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().DtCadastroText)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Objetos)
+            {
+                var situacaoLabel = item.SituacaoId == (int)Enumerations.Devolucao.SituacaoDevolucao.Atrasado ? "label-danger" : "label-success";
+
+                <tr>
+                    <td>
+                        <strong>@Html.DisplayFor(modelItem => item.Id)</strong>
+                    </td>
+                    <td>
+                        <span class="label @situacaoLabel">@Html.DisplayFor(modelItem => item.SituacaoText)</span>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.DtEmprestimoText)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.DtPrevisaoDevolucaoText)</small>
+                    </td>
+                    <td>
+                        <i>@Html.DisplayFor(modelItem => item.LivrosText)</i>
+                    </td>
+                    <td>
+                        <i>@Html.DisplayFor(modelItem => item.PessoaText)</i>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.DtCadastroText)</small>
+                    </td>
+                </tr>
+            }
+
+        <tbody>
+</table>
+}

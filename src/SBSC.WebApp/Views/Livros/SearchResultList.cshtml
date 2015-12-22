@@ -1,0 +1,159 @@
+﻿@model SBSC.ViewModel.Livros.LivroSearchViewModel
+@using SBSC.Model
+
+@{
+    Layout = null;
+
+    var podeEditar = (bool)ViewBag.PodeEditar;
+    var podeExcluir = (bool)ViewBag.PodeExcluir;
+}
+
+<div class="col-md-12">
+    <ul class="nav nav-tabs right-aligned">
+        <li class="tab-title pull-left">
+            <div class="search-string">
+                @Model.FoundObjects registro(s) encontrado(s)
+                @if (!string.IsNullOrEmpty(Model.Termo))
+                {
+                    <text>
+                        para: <strong>“@Model.Termo”</strong>
+                    </text>
+                }
+            </div>
+        </li>
+    </ul>
+
+    <br />
+
+    <form method="get" class="search-bar" action="@Url.Action("Search")" enctype="application/x-www-form-urlencoded">
+
+        <div class="input-group">
+            <input type="text" class="form-control input-lg" name="search" placeholder="@ViewBag.SearchWaterMark" style="width: 100% !important; max-width: 100% !important;">
+
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-lg btn-primary btn-icon">
+                    Pesquisar
+                    <i class="entypo-search"></i>
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<br />
+
+@if (!Model.Objetos.Any())
+{
+    <div class="alert alert-warning" role="alert">
+        Nenhum livro encontrado, talvez o livro que você está procurando não exista, você não quer @Html.ActionLink("cadastrar um novo livro", "Create", new object { }, new { @class = "alert-link" })?
+    </div>
+}
+else
+{
+    <table class="table table-striped table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().StatusText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Codigo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Titulo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().EstadoConservacaoText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Autor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Genero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Editora)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().TotalReservas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().TotalEmprestimos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().BaixadoText)
+                </th>
+                @if (podeEditar)
+                {
+                    <th></th>
+                }
+                @if (podeExcluir)
+                {
+                    <th></th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Objetos)
+            {
+                var statusLabel = item.StatusId == (int)Enumerations.Livro.StatusLivro.Indisponivel ? "label-danger" : "label-success";
+                var baixadoLabel = item.BaixadoId == (int)Enumerations.Generico.SimOuNao.Sim ? "label-danger" : "label-success";
+
+                <tr>
+                    <td>
+                        <span class="label @statusLabel">@Html.DisplayFor(modelItem => item.StatusText)</span>
+                    </td>
+                    <td>
+                        <strong>@Html.DisplayFor(modelItem => item.Codigo)</strong>
+                    </td>
+                    <td>
+                        <i>@Html.DisplayFor(modelItem => item.Titulo)</i>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.EstadoConservacaoText)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.Autor)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.Genero)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.Editora)</small>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalReservas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalEmprestimos)
+                    </td>
+                    <td>
+                        <span class="label @baixadoLabel">
+                            @Html.DisplayFor(modelItem => item.BaixadoText)
+                        </span>
+                        <small>
+                            @Html.DisplayFor(modelItem => item.DtBaixaText)
+                        </small>
+                    </td>
+                    @if (podeEditar)
+                    {
+                        <td>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                        </td>
+                    }
+                    @if (podeExcluir)
+                    {
+                        <td>
+                            @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
+                        </td>
+                    }
+                </tr>
+            }
+
+        <tbody>
+    </table>
+
+    @Html.Partial("Pagination", Model.SearchModel)
+}

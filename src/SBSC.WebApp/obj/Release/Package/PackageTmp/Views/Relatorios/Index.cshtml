@@ -1,0 +1,63 @@
+﻿@{
+
+}
+
+<div class="page-header">
+    <h2>@ViewBag.Title <small>@ViewBag.Subtitle</small></h2>
+</div>
+
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" onclick="window.location = '@Url.Action("Index")';">Atualizar</button>
+</div>
+
+<hr />
+
+<table class="table">
+    <tr>
+        <th width="1"></th>
+        <th>
+            Relatório
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Emitir", "EmitirReportPessoas")
+        </td>
+        <td>
+            Relatório de pessoas
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Emitir", "EmitirReportEmprestimos")
+        </td>
+        <td>
+            Relatório de empréstimos
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Emitir", "EmitirReportEmprestimosAtrasados")
+        </td>
+        <td>
+            Relatório de empréstimos atrasados
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Emitir", "EmitirReportLivros")
+        </td>
+        <td>
+            Relatório de livros
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Emitir", "EmitirReportReservas")
+        </td>
+        <td>
+            Relatório de reservas
+        </td>
+    </tr>
+
+</table>

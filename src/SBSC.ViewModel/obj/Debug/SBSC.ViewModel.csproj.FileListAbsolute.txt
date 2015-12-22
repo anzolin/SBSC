@@ -1,0 +1,9 @@
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.ViewModel\bin\Debug\SBSC.ViewModel.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.ViewModel\bin\Debug\SBSC.ViewModel.pdb
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.ViewModel\bin\Debug\SBSC.Model.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.ViewModel\bin\Debug\EntityFramework.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.ViewModel\bin\Debug\SBSC.Model.pdb
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.ViewModel\bin\Debug\EntityFramework.xml
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.ViewModel\obj\Debug\SBSC.ViewModel.csprojResolveAssemblyReference.cache
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.ViewModel\obj\Debug\SBSC.ViewModel.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.ViewModel\obj\Debug\SBSC.ViewModel.pdb

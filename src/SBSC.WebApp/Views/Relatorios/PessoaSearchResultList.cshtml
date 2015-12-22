@@ -1,0 +1,76 @@
+﻿@model SBSC.ViewModel.Pessoas.PessoaSearchViewModel
+@using SBSC.Model
+@{
+    Layout = "~/Views/Shared/_LayoutReport.cshtml";
+}
+
+<div class="page-header">
+    <h3>@ViewBag.Title <small>@ViewBag.Subtitle</small></h3>
+</div>
+
+@if (!Model.Objetos.Any())
+{
+    <div class="alert alert-warning" role="alert">
+        Nenhuma pessoa encontrada, talvez a pessoa que você está procurando não exista.
+    </div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().CodigoMatricula)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Login)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().TotalReservas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().TotalEmprestimos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().DtCadastroText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().DtEdicaoText)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Objetos)
+            {
+                <tr>
+                    <td>
+                        <i>@Html.DisplayFor(modelItem => item.Nome)</i>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.CodigoMatricula)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.Login)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.TotalReservas)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.TotalEmprestimos)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.DtCadastroText)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.DtEdicaoText)</small>
+                    </td>
+                </tr>
+            }
+
+        <tbody>
+</table>
+}

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SBSCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Emprestimo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Pessoa" Type="int" Nullable="false" />
+    <Property Name="DtEmprestimo" Type="date" Nullable="false" />
+    <Property Name="DtPrevisaoDevolucao" Type="date" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="DtHrCadastro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItemEmprestimo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Emprestimo" Type="int" Nullable="false" />
+    <Property Name="Id_Livro" Type="int" Nullable="false" />
+    <Property Name="DtDevolucao" Type="date" Nullable="false" />
+    <Property Name="DtHrCadastro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Livro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Titulo" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Genero" Type="nvarchar" MaxLength="50" />
+    <Property Name="Autor" Type="nvarchar" MaxLength="250" />
+    <Property Name="Editora" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ano" Type="int" />
+    <Property Name="EstadoConservacao" Type="tinyint" Nullable="false" />
+    <Property Name="Local" Type="nvarchar" MaxLength="50" />
+    <Property Name="Resumo" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsBaixado" Type="bit" Nullable="false" />
+    <Property Name="DtBaixa" Type="datetime" />
+    <Property Name="DtHrCadastro" Type="datetime" Nullable="false" />
+    <Property Name="DtHrEdicao" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tipo" Type="tinyint" Nullable="false" />
+    <Property Name="Sexo" Type="tinyint" />
+    <Property Name="CodigoMatricula" Type="nvarchar" MaxLength="50" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" />
+    <Property Name="Senha" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Endereco" Type="nvarchar" MaxLength="250" />
+    <Property Name="Bairro" Type="nvarchar" MaxLength="50" />
+    <Property Name="CEP" Type="nvarchar" MaxLength="10" />
+    <Property Name="Cidade" Type="nvarchar" MaxLength="150" />
+    <Property Name="UF" Type="int" />
+    <Property Name="Telefone" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsSistema" Type="bit" Nullable="false" />
+    <Property Name="DtHrCadastro" Type="datetime" Nullable="false" />
+    <Property Name="DtHrEdicao" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Reserva">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Pessoa" Type="int" Nullable="false" />
+    <Property Name="Id_Livro" Type="int" Nullable="false" />
+    <Property Name="DtPrevisaoEmprestimo" Type="date" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="DtHrCadastro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Emprestimo_Pessoa">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="1" />
+    <End Role="Emprestimo" Type="Self.Emprestimo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Emprestimo">
+        <PropertyRef Name="Id_Pessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemEmprestimo_Emprestimo">
+    <End Role="Emprestimo" Type="Self.Emprestimo" Multiplicity="1" />
+    <End Role="ItemEmprestimo" Type="Self.ItemEmprestimo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Emprestimo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ItemEmprestimo">
+        <PropertyRef Name="Id_Emprestimo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ItemEmprestimo_Livro">
+    <End Role="Livro" Type="Self.Livro" Multiplicity="1" />
+    <End Role="ItemEmprestimo" Type="Self.ItemEmprestimo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Livro">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ItemEmprestimo">
+        <PropertyRef Name="Id_Livro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reserva_Livro">
+    <End Role="Livro" Type="Self.Livro" Multiplicity="1" />
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Livro">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="Id_Livro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reserva_Pessoa">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="1" />
+    <End Role="Reserva" Type="Self.Reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reserva">
+        <PropertyRef Name="Id_Pessoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SBSCModelStoreContainer">
+    <EntitySet Name="Emprestimo" EntityType="Self.Emprestimo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemEmprestimo" EntityType="Self.ItemEmprestimo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Livro" EntityType="Self.Livro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pessoa" EntityType="Self.Pessoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reserva" EntityType="Self.Reserva" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Emprestimo_Pessoa" Association="Self.FK_Emprestimo_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Emprestimo" EntitySet="Emprestimo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemEmprestimo_Emprestimo" Association="Self.FK_ItemEmprestimo_Emprestimo">
+      <End Role="Emprestimo" EntitySet="Emprestimo" />
+      <End Role="ItemEmprestimo" EntitySet="ItemEmprestimo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ItemEmprestimo_Livro" Association="Self.FK_ItemEmprestimo_Livro">
+      <End Role="Livro" EntitySet="Livro" />
+      <End Role="ItemEmprestimo" EntitySet="ItemEmprestimo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reserva_Livro" Association="Self.FK_Reserva_Livro">
+      <End Role="Livro" EntitySet="Livro" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reserva_Pessoa" Association="Self.FK_Reserva_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Reserva" EntitySet="Reserva" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

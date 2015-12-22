@@ -1,0 +1,17 @@
+﻿@model SBSC.ViewModel.Devolucoes.DevolucaoSearchViewModel
+
+@{
+
+}
+
+<div class="page-header">
+    <h2>@ViewBag.Title <small>@ViewBag.Subtitle</small></h2>
+</div>
+
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" onclick="window.location = '@Url.Action("Search")';">Atualizar</button>
+</div>
+
+<hr />
+
+@Html.Partial("SearchResultList", Model)

@@ -1,0 +1,46 @@
+﻿@model SBSC.ViewModel.Widgets.WidgetViewModel
+
+@{
+    Layout = null;
+}
+
+<div class="panel @Model.PanelStyle">
+    <!-- Default panel contents -->
+    <div class="panel-heading">@Model.Title</div>
+    @if (!string.IsNullOrEmpty(Model.Description))
+    {
+        <div class="panel-body">
+            <p>@Model.Description</p>
+        </div>
+    }
+
+    @if (Model.Itens.Any())
+    {
+        <table class="table table-striped table-hover table-responsive">
+            @if (!string.IsNullOrEmpty(Model.ColumnTitle))
+            {
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>@Model.ColumnTitle</th>
+                    </tr>
+                </thead>
+            }
+            <tbody>
+                @foreach (var item in @Model.Itens)
+                {
+                    <tr>
+                        <th scope="row">@item.Total</th>
+                        <td><small>@item.Description</small></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="text-danger">@Model.MessageNoItens</p>
+    }
+    </table>
+</div>
+

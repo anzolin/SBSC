@@ -1,0 +1,89 @@
+﻿@model SBSC.ViewModel.SearchModel
+@{
+    Layout = null;
+}
+
+@helper buildLinks(int start, int end, string innerContent)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="pagination pagination-sm">
+                @if (Model.Page.HasValue && Model.Page.Value != 1)
+                {
+                    <li><a href="@Url.Action("Search", new { Page = 1 })"><</a></li>
+                }
+
+                @for (int i = start; i <= end; i++)
+                {
+                    <li class="@(i == Model.CurrentPage ? "active" : "")">@Html.ActionLink(i.ToString(), "Search", new { Page = i })</li>
+                }
+
+                @if (Model.Page.HasValue && Model.Page.Value != (int)Model.TotalPages)
+                {
+                    <li><a href="@Url.Action("Search", new { Page = Model.TotalPages })">></a></li>
+                }
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+}
+
+
+@helper pageLinks()
+{
+    const int maxPages = 10;
+
+    if (Model.TotalPages <= maxPages)
+    {
+        @buildLinks(1, (int)Model.TotalPages, null)
+        return;
+    }
+
+    int pagesAfter = (int)Model.TotalPages - (int)Model.CurrentPage; // Number of pages after current
+    int pagesBefore = Model.CurrentPage - 1; // Number of pages before current
+
+    if (pagesAfter <= 4)
+    {
+        @buildLinks(1, 1, null) // Show 1st page
+
+        int pageSubset = (int)Model.TotalPages - maxPages - 1 > 1 ? (int)Model.TotalPages - maxPages - 1 : 2;
+        @buildLinks(pageSubset, pageSubset, "...") // Show page subset (...)
+ 
+        @buildLinks((int)Model.TotalPages - maxPages + 3, (int)Model.TotalPages, null) // Show last pages
+
+        return; // Exit
+    }
+
+    if (pagesBefore <= 4)
+    {
+        @buildLinks(1, maxPages - 2, null) // Show 1st pages
+
+        int pageSubset = maxPages + 2 < (int)Model.TotalPages ? maxPages + 2 : (int)Model.TotalPages - 1;
+        @buildLinks(pageSubset, pageSubset, "...") // Show page subset (...)
+ 
+        @buildLinks((int)Model.TotalPages, (int)Model.TotalPages, null) // Show last page
+
+        return; // Exit
+    }
+
+    if (pagesAfter > 4)
+    {
+        @buildLinks(1, 1, null) // Show 1st pages
+
+        int pageSubset1 = Model.CurrentPage - 7 > 1 ? Model.CurrentPage - 7 : 2;
+        int pageSubset2 = Model.CurrentPage + 7 < (int)Model.TotalPages ? Model.CurrentPage + 7 : (int)Model.TotalPages - 1;
+ 
+        @buildLinks(pageSubset1, pageSubset1, pageSubset1 == Model.CurrentPage - 4 ? null : "...") // Show 1st page subset (...)
+ 
+        @buildLinks(Model.CurrentPage - 3, Model.CurrentPage + 3, null) // Show middle pages
+
+        // Show 2nd page subset (...)
+        // only show ... if page is contigous to the previous one.
+        @buildLinks(pageSubset2, pageSubset2, pageSubset2 == Model.CurrentPage + 4 ? null : "...")
+        @buildLinks((int)Model.TotalPages, (int)Model.TotalPages, null) // Show last page
+
+        return; // Exit
+    }    
+}
+
+@pageLinks()

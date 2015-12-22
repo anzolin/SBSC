@@ -1,0 +1,60 @@
+﻿@model SBSC.ViewModel.Pessoas.PessoaViewModel
+
+@{
+    
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoMatricula)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodigoMatricula)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Login)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Login)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalReservas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalReservas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalEmprestimos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalEmprestimos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DtCadastro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DtCadastro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DtEdicao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DtEdicao)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

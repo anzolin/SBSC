@@ -1,0 +1,138 @@
+USE SBSC
+GO
+
+INSERT INTO Pessoa
+           (Tipo
+		   ,Sexo
+           ,CodigoMatricula
+           ,Login
+           ,Senha
+           ,Nome
+           ,Endereco
+           ,Bairro
+           ,CEP
+           ,Cidade
+           ,UF
+           ,Telefone
+           ,IsSistema
+           ,DtHrCadastro
+           ,DtHrEdicao)
+     VALUES
+           (1
+		   ,2
+           ,NULL
+           ,'admin'
+           ,'1q2w3e4r'
+           ,'Administrador'
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,1
+           ,GETDATE()
+           ,NULL)
+GO
+
+INSERT INTO Pessoa
+           (Tipo
+		   ,Sexo
+           ,CodigoMatricula
+           ,Login
+           ,Senha
+           ,Nome
+           ,Endereco
+           ,Bairro
+           ,CEP
+           ,Cidade
+           ,UF
+           ,Telefone
+           ,IsSistema
+           ,DtHrCadastro
+           ,DtHrEdicao)
+     VALUES
+           (2
+		   ,2
+           ,NULL
+           ,'bibliotecario'
+           ,'bibliotecario'
+           ,'Bibliotecário'
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,1
+           ,GETDATE()
+           ,NULL)
+GO
+
+INSERT INTO Pessoa
+           (Tipo
+		   ,Sexo
+           ,CodigoMatricula
+           ,Login
+           ,Senha
+           ,Nome
+           ,Endereco
+           ,Bairro
+           ,CEP
+           ,Cidade
+           ,UF
+           ,Telefone
+           ,IsSistema
+           ,DtHrCadastro
+           ,DtHrEdicao)
+     VALUES
+           (1
+		   ,2
+           ,NULL
+           ,'diegoanzolin'
+           ,'1q2w3e4r'
+           ,'Diego Anzolin Ferreira'
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,1
+           ,GETDATE()
+           ,NULL)
+GO
+
+INSERT INTO Pessoa
+           (Tipo
+		   ,Sexo
+           ,CodigoMatricula
+           ,Login
+           ,Senha
+           ,Nome
+           ,Endereco
+           ,Bairro
+           ,CEP
+           ,Cidade
+           ,UF
+           ,Telefone
+           ,IsSistema
+           ,DtHrCadastro
+           ,DtHrEdicao)
+     VALUES
+           (1
+		   ,2
+           ,NULL
+           ,'fernandoelio'
+           ,'1q2w3e4r'
+           ,'Fernando Élio da Silva Venâncio Júnior'
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,NULL
+           ,1
+           ,GETDATE()
+           ,NULL)
+GO

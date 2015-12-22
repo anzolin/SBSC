@@ -1,0 +1,38 @@
+﻿@model SBSC.ViewModel.Emprestimos.EmprestimoSearchViewModel
+
+@{
+
+}
+
+<div class="page-header">
+    <h2>@ViewBag.Title <small>@ViewBag.Subtitle</small></h2>
+</div>
+
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" onclick="window.location = '@Url.Action("Index")';">Voltar</button>
+</div>
+
+<hr />
+
+<p>@ViewBag.Information</p>
+
+<br />
+
+<div class="col-md-12">
+    <form method="post" class="search-bar" action="@Url.Action("EmitirReportEmprestimos")" enctype="application/x-www-form-urlencoded">
+
+        <div class="input-group">
+            <input type="text" class="form-control input-lg" name="search" placeholder="@ViewBag.SearchWaterMark" style="width: 100% !important; max-width: 100% !important;">
+
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-lg btn-primary btn-icon">
+                    Gerar
+                    <i class="entypo-search"></i>
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<br />

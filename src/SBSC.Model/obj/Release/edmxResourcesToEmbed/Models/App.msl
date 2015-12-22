@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SBSCModelStoreContainer" CdmEntityContainer="SBSCEntities">
+    <EntitySetMapping Name="Emprestimo">
+      <EntityTypeMapping TypeName="SBSCModel.Emprestimo">
+        <MappingFragment StoreEntitySet="Emprestimo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Pessoa" ColumnName="Id_Pessoa" />
+          <ScalarProperty Name="DtEmprestimo" ColumnName="DtEmprestimo" />
+          <ScalarProperty Name="DtPrevisaoDevolucao" ColumnName="DtPrevisaoDevolucao" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DtHrCadastro" ColumnName="DtHrCadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemEmprestimo">
+      <EntityTypeMapping TypeName="SBSCModel.ItemEmprestimo">
+        <MappingFragment StoreEntitySet="ItemEmprestimo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Emprestimo" ColumnName="Id_Emprestimo" />
+          <ScalarProperty Name="Id_Livro" ColumnName="Id_Livro" />
+          <ScalarProperty Name="DtDevolucao" ColumnName="DtDevolucao" />
+          <ScalarProperty Name="DtHrCadastro" ColumnName="DtHrCadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Livro">
+      <EntityTypeMapping TypeName="SBSCModel.Livro">
+        <MappingFragment StoreEntitySet="Livro">
+          <ScalarProperty Name="DtBaixa" ColumnName="DtBaixa" />
+          <ScalarProperty Name="IsBaixado" ColumnName="IsBaixado" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="EstadoConservacao" ColumnName="EstadoConservacao" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Autor" ColumnName="Autor" />
+          <ScalarProperty Name="Editora" ColumnName="Editora" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="Resumo" ColumnName="Resumo" />
+          <ScalarProperty Name="DtHrCadastro" ColumnName="DtHrCadastro" />
+          <ScalarProperty Name="DtHrEdicao" ColumnName="DtHrEdicao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pessoa">
+      <EntityTypeMapping TypeName="SBSCModel.Pessoa">
+        <MappingFragment StoreEntitySet="Pessoa">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IsSistema" ColumnName="IsSistema" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="UF" ColumnName="UF" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="CodigoMatricula" ColumnName="CodigoMatricula" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="DtHrCadastro" ColumnName="DtHrCadastro" />
+          <ScalarProperty Name="DtHrEdicao" ColumnName="DtHrEdicao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reserva">
+      <EntityTypeMapping TypeName="SBSCModel.Reserva">
+        <MappingFragment StoreEntitySet="Reserva">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Pessoa" ColumnName="Id_Pessoa" />
+          <ScalarProperty Name="Id_Livro" ColumnName="Id_Livro" />
+          <ScalarProperty Name="DtPrevisaoEmprestimo" ColumnName="DtPrevisaoEmprestimo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DtHrCadastro" ColumnName="DtHrCadastro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

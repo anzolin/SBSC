@@ -1,0 +1,9 @@
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Model\bin\Debug\SBSC.Model.dll.config
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Model\bin\Debug\SBSC.Model.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Model\bin\Debug\SBSC.Model.pdb
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Model\bin\Debug\EntityFramework.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Model\bin\Debug\EntityFramework.xml
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Model\obj\Debug\SBSC.Model.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Model\obj\Debug\SBSC.Model.pdb

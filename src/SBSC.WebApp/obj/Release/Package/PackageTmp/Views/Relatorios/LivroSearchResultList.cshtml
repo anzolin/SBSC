@@ -1,0 +1,103 @@
+﻿@model SBSC.ViewModel.Livros.LivroSearchViewModel
+@using SBSC.Model
+@{
+    Layout = "~/Views/Shared/_LayoutReport.cshtml";
+}
+
+<div class="page-header">
+    <h3>@ViewBag.Title <small>@ViewBag.Subtitle</small></h3>
+</div>
+
+@if (!Model.Objetos.Any())
+{
+    <div class="alert alert-warning" role="alert">
+        Nenhum livro encontrado, talvez o livro que você está procurando não exista.
+    </div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().StatusText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Codigo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Titulo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().EstadoConservacaoText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Autor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Genero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Editora)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().TotalReservas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().TotalEmprestimos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().BaixadoText)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Objetos)
+            {
+                var statusLabel = item.StatusId == (int)Enumerations.Livro.StatusLivro.Indisponivel ? "label-danger" : "label-success";
+                var baixadoLabel = item.BaixadoId == (int)Enumerations.Generico.SimOuNao.Sim ? "label-danger" : "label-success";
+
+                <tr>
+                    <td>
+                        <span class="label @statusLabel">@Html.DisplayFor(modelItem => item.StatusText)</span>
+                    </td>
+                    <td>
+                        <strong>@Html.DisplayFor(modelItem => item.Codigo)</strong>
+                    </td>
+                    <td>
+                        <i>@Html.DisplayFor(modelItem => item.Titulo)</i>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.EstadoConservacaoText)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.Autor)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.Genero)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.Editora)</small>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalReservas)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalEmprestimos)
+                    </td>
+                    <td>
+                        <span class="label @baixadoLabel">
+                            @Html.DisplayFor(modelItem => item.BaixadoText)
+                        </span>
+                        <br />
+                        <small>
+                            @Html.DisplayFor(modelItem => item.DtBaixaText)
+                        </small>
+                    </td>
+                </tr>
+            }
+
+        <tbody>
+</table>
+}

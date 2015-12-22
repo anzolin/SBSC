@@ -1,0 +1,4 @@
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Lib\bin\Debug\SBSC.Lib.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Lib\bin\Debug\SBSC.Lib.pdb
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Lib\obj\Debug\SBSC.Lib.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Lib\obj\Debug\SBSC.Lib.pdb

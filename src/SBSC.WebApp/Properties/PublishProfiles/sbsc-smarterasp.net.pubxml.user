@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Projetos\TccUniverso@VisualStudio\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Browsers/qt.browser">
+      <publishTime>10/12/2015 18:29:40</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>10/12/2015 18:29:24</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/12/2015 18:29:33</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/12/2015 18:29:25</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>10/12/2015 18:29:30</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>10/12/2015 18:29:32</publishTime>
+    </File>
+    <File Include="bin/pt-br/System.Web.Mvc.resources.dll">
+      <publishTime>10/20/2015 21:16:33</publishTime>
+    </File>
+    <File Include="bin/Rotativa.dll">
+      <publishTime>10/12/2015 18:29:34</publishTime>
+    </File>
+    <File Include="bin/SBSC.Business.dll">
+      <publishTime>10/20/2015 21:17:58</publishTime>
+    </File>
+    <File Include="bin/SBSC.Lib.dll">
+      <publishTime>10/20/2015 21:17:57</publishTime>
+    </File>
+    <File Include="bin/SBSC.Model.dll">
+      <publishTime>10/20/2015 21:17:57</publishTime>
+    </File>
+    <File Include="bin/SBSC.ViewModel.dll">
+      <publishTime>10/20/2015 21:17:58</publishTime>
+    </File>
+    <File Include="bin/SBSC.WebApp.dll">
+      <publishTime>11/09/2015 12:09:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>10/20/2015 21:16:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>10/20/2015 21:16:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>10/12/2015 18:29:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>10/20/2015 21:16:26</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>10/20/2015 21:16:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>10/20/2015 21:16:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>10/20/2015 21:16:29</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>10/12/2015 18:29:38</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>10/12/2015 18:29:41</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>10/12/2015 18:29:41</publishTime>
+    </File>
+    <File Include="Content/jumbotrongb.jpg">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>10/12/2015 18:29:41</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>10/12/2015 18:29:40</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>10/12/2015 18:29:41</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>10/12/2015 18:29:41</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>10/12/2015 18:29:41</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>10/12/2015 18:29:41</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/12/2015 18:29:40</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/20/2015 21:57:29</publishTime>
+    </File>
+    <File Include="Rotativa/wkhtmltopdf.exe">
+      <publishTime>10/12/2015 18:30:16</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>10/12/2015 18:29:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>10/12/2015 18:29:43</publishTime>
+    </File>
+    <File Include="Scripts/inputmask.js">
+      <publishTime>10/12/2015 18:29:43</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.min.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.4.min.map">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.inputmask.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.pt-br.js">
+      <publishTime>10/20/2015 21:57:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.pt-br.min.js">
+      <publishTime>10/20/2015 21:57:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/methods_pt.js">
+      <publishTime>10/20/2015 21:28:43</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>10/20/2015 21:57:28</publishTime>
+    </File>
+    <File Include="Views/Base/UserData.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Devolucoes/Devolver.cshtml">
+      <publishTime>10/12/2015 19:31:04</publishTime>
+    </File>
+    <File Include="Views/Devolucoes/Search.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Devolucoes/SearchResultList.cshtml">
+      <publishTime>10/13/2015 12:33:14</publishTime>
+    </File>
+    <File Include="Views/Emprestimos/Edit.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Emprestimos/Search.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Emprestimos/SearchResultList.cshtml">
+      <publishTime>10/13/2015 12:35:27</publishTime>
+    </File>
+    <File Include="Views/Error/NotFound.cshtml">
+      <publishTime>10/13/2015 16:19:07</publishTime>
+    </File>
+    <File Include="Views/Error/Unknown.cshtml">
+      <publishTime>10/13/2015 16:19:11</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Livros/Details.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Livros/Edit.cshtml">
+      <publishTime>10/13/2015 12:25:39</publishTime>
+    </File>
+    <File Include="Views/Livros/Search.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Livros/SearchResultList.cshtml">
+      <publishTime>10/13/2015 13:06:17</publishTime>
+    </File>
+    <File Include="Views/Login/Login.cshtml">
+      <publishTime>10/13/2015 08:37:13</publishTime>
+    </File>
+    <File Include="Views/Pessoas/Details.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Pessoas/Edit.cshtml">
+      <publishTime>10/26/2015 11:23:58</publishTime>
+    </File>
+    <File Include="Views/Pessoas/Search.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Pessoas/SearchResultList.cshtml">
+      <publishTime>10/13/2015 12:40:36</publishTime>
+    </File>
+    <File Include="Views/Relatorios/EmitirReportEmprestimos.cshtml">
+      <publishTime>10/13/2015 08:35:54</publishTime>
+    </File>
+    <File Include="Views/Relatorios/EmitirReportEmprestimosAtrasados.cshtml">
+      <publishTime>10/13/2015 08:35:54</publishTime>
+    </File>
+    <File Include="Views/Relatorios/EmitirReportLivros.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Relatorios/EmitirReportPessoas.cshtml">
+      <publishTime>10/12/2015 18:29:45</publishTime>
+    </File>
+    <File Include="Views/Relatorios/EmitirReportReservas.cshtml">
+      <publishTime>10/12/2015 18:29:46</publishTime>
+    </File>
+    <File Include="Views/Relatorios/EmprestimoAtrasadoSearchResultList.cshtml">
+      <publishTime>10/13/2015 13:21:03</publishTime>
+    </File>
+    <File Include="Views/Relatorios/EmprestimoSearchResultList.cshtml">
+      <publishTime>10/13/2015 13:21:00</publishTime>
+    </File>
+    <File Include="Views/Relatorios/Index.cshtml">
+      <publishTime>10/12/2015 18:29:46</publishTime>
+    </File>
+    <File Include="Views/Relatorios/LivroSearchResultList.cshtml">
+      <publishTime>10/16/2015 18:26:44</publishTime>
+    </File>
+    <File Include="Views/Relatorios/PessoaSearchResultList.cshtml">
+      <publishTime>10/13/2015 13:20:53</publishTime>
+    </File>
+    <File Include="Views/Relatorios/ReservaSearchResultList.cshtml">
+      <publishTime>10/13/2015 13:20:50</publishTime>
+    </File>
+    <File Include="Views/Reservas/Edit.cshtml">
+      <publishTime>10/12/2015 19:58:19</publishTime>
+    </File>
+    <File Include="Views/Reservas/Search.cshtml">
+      <publishTime>10/12/2015 18:29:46</publishTime>
+    </File>
+    <File Include="Views/Reservas/SearchResultList.cshtml">
+      <publishTime>10/13/2015 12:36:35</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>10/12/2015 18:29:46</publishTime>
+    </File>
+    <File Include="Views/Shared/Pagination.cshtml">
+      <publishTime>10/12/2015 18:29:46</publishTime>
+    </File>
+    <File Include="Views/Shared/Widget.cshtml">
+      <publishTime>10/12/2015 18:29:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>10/20/2015 22:18:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutError.cshtml">
+      <publishTime>10/17/2015 11:29:38</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutLogin.cshtml">
+      <publishTime>10/17/2015 11:13:32</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutReport.cshtml">
+      <publishTime>10/12/2015 18:29:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_MenuAluno.cshtml">
+      <publishTime>10/12/2015 18:29:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_MenuBibliotecario.cshtml">
+      <publishTime>10/12/2015 18:29:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_Notifications.cshtml">
+      <publishTime>10/17/2015 10:50:56</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>10/12/2015 18:29:44</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/20/2015 22:19:41</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

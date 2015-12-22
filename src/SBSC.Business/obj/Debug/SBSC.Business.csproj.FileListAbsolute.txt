@@ -1,0 +1,16 @@
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\SBSC.Business.dll.config
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\SBSC.Business.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\SBSC.Business.pdb
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\EntityFramework.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\SBSC.Lib.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\SBSC.Model.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\SBSC.ViewModel.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\SBSC.Lib.pdb
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\SBSC.Model.pdb
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\SBSC.ViewModel.pdb
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\EntityFramework.xml
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\obj\Debug\SBSC.Business.csprojResolveAssemblyReference.cache
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\obj\Debug\SBSC.Business.dll
+D:\Projetos\TccUniverso@VisualStudio\Development\SBSC.Business\obj\Debug\SBSC.Business.pdb

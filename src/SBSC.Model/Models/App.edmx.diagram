@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b8e47045812b487b972c203f061ffb4a" Name="Diagram1">
+        <EntityTypeShape EntityType="SBSCModel.Emprestimo" Width="1.5" PointX="1.125" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBSCModel.ItemEmprestimo" Width="1.5" PointX="3.375" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBSCModel.Livro" Width="1.5" PointX="5.5" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBSCModel.Pessoa" Width="1.5" PointX="1.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SBSCModel.Reserva" Width="1.5" PointX="4.75" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="SBSCModel.FK_Emprestimo_Pessoa" ManuallyRouted="false" />
+        <AssociationConnector Association="SBSCModel.FK_ItemEmprestimo_Emprestimo" ManuallyRouted="false" />
+        <AssociationConnector Association="SBSCModel.FK_ItemEmprestimo_Livro" ManuallyRouted="false" />
+        <AssociationConnector Association="SBSCModel.FK_Reserva_Livro" ManuallyRouted="false" />
+        <AssociationConnector Association="SBSCModel.FK_Reserva_Pessoa" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

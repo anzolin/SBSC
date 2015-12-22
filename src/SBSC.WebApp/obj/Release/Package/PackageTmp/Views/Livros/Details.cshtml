@@ -1,0 +1,90 @@
+﻿@model SBSC.ViewModel.Livros.LivroViewModel
+
+@{
+
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Livro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd>
+            <big><strong>@Html.DisplayFor(model => model.Titulo)</strong></big>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoConservacaoText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EstadoConservacaoText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Genero)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Autor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Autor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Editora)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Editora)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ano)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Local)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Local)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resumo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Resumo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalReservas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalReservas)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalEmprestimos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalEmprestimos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DtCadastro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DtCadastro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DtEdicao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DtEdicao)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

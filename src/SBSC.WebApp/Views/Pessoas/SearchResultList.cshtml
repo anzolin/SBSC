@@ -1,0 +1,117 @@
+﻿@model SBSC.ViewModel.Pessoas.PessoaSearchViewModel
+@using SBSC.Model
+@{
+    Layout = null;
+}
+
+<div class="col-md-12">
+    <ul class="nav nav-tabs right-aligned">
+        <li class="tab-title pull-left">
+            <div class="search-string">
+                @Model.FoundObjects registro(s) encontrado(s)
+                @if (!string.IsNullOrEmpty(Model.Termo))
+                {
+                    <text>
+                        para: <strong>“@Model.Termo”</strong>
+                    </text>
+                }
+            </div>
+        </li>
+    </ul>
+
+    <br />
+
+    <form method="get" class="search-bar" action="@Url.Action("Search")" enctype="application/x-www-form-urlencoded">
+
+        <div class="input-group">
+            <input type="text" class="form-control input-lg" name="search" placeholder="@ViewBag.SearchWaterMark" style="width: 100% !important; max-width: 100% !important;">
+
+            <div class="input-group-btn">
+                <button type="submit" class="btn btn-lg btn-primary btn-icon">
+                    Pesquisar
+                    <i class="entypo-search"></i>
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<br />
+
+@if (!Model.Objetos.Any())
+{
+    <div class="alert alert-warning" role="alert">
+        Nenhuma pessoa encontrada, talvez a pessoa que você está procurando não exista, você não quer @Html.ActionLink("cadastrar uma nova pessoa", "Create", new object { }, new { @class = "alert-link" })?
+    </div>
+}
+else
+{
+    <table class="table table-striped table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().CodigoMatricula)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().Login)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().TotalReservas)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().TotalEmprestimos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().DtCadastroText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Objetos.First().DtEdicaoText)
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.Objetos)
+            {
+                <tr>
+                    <td>
+                        <i>@Html.DisplayFor(modelItem => item.Nome)</i>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.CodigoMatricula)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.Login)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.TotalReservas)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.TotalEmprestimos)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.DtCadastroText)</small>
+                    </td>
+                    <td>
+                        <small>@Html.DisplayFor(modelItem => item.DtEdicaoText)</small>
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        <tbody>
+    </table>
+    
+    @Html.Partial("Pagination", Model.SearchModel)
+}
