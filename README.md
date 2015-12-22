@@ -1,5 +1,3 @@
 # SBSC
 
 This project aims to present the software project that was developed for the Escola Municipal Santa Cândida, as a requirement for completion of the Systems Analysis course at the Universidade Salgado de Oliveira.
-
-Initially, the context has evolved, in which he inserted the introduction, objectives, motivation and justification. Subsequently, we elaborated the project: scope statement, plan development process, development methodology, analytical process structure; including size estimation, effort and time. Soon after, were verified the customer requirements, specifying the software requirements. In the fourth chapter, is reserved for the modeling and analysis. The fifth chapter focused on the project modeling. The next two chapters, six and seven, were dedicated to the tests. The eighth chapter was dedicated to the documentation and the nine to implementation and testing and pre-operation. In chapter ten monitoring and control was done. Eleven and twelve chapters correspond to the closing of the project and bibliography.
